@@ -1,0 +1,203 @@
+body{
+  background:url('https://e0.pxfuel.com/wallpapers/252/792/desktop-wallpaper-new-music-notes-background-full-1920%C3%971080.jpg');
+  background-size:cover ;
+  background-repeat: no-repeat;
+  min-Height: 100vh;
+}
+
+.container{
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  margin: 20px;
+  padding: 20px;
+  font-weight: 700;
+}
+form{
+  display: grid;
+
+}
+label{
+  margin: 10px;
+  text-align: center;
+}
+
+input{
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+height: 100px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+/* Search css */
+
+.container-item ul {
+  list-style: none;
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+}
+
+.container-item ul li {
+  flex: 1; 
+  margin: 10px; 
+
+
+}
+a{
+  color: #fff;
+  text-decoration: none;
+}
+input{
+  font-size: smaller;
+  font-weight:bold;
+  padding: 5px;
+}
+
+/* Contact Sayfası CSS */
+
+
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal {
+  max-width: 400px;
+  width: 100%;
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #000;
+  text-align: center;
+  margin: 0 auto; 
+  margin-bottom: 15px;
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  padding-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+.close {
+  font-size: 50px; 
+  cursor: pointer;
+}
+
+/* FOOTER SAYFASI CSS */
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 560px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-content p {
+  margin: 0;
+  
+}
+
+.Contact {
+  display: flex;
+  align-items: center;
+}
+
+.Contact label {
+  margin-right: 10px;
+}
+a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+button{
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
