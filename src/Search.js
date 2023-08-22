@@ -1,35 +1,45 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useState,useMemo } from 'react'
 
 const Search = () => {
    const[search,setSearch]=useState("")
    const[result,setResult]=useState([])
+   const[showResult,setShowResult]=useState(false)
    const apiPath="/song/id"
-   const options = {
-     method: 'GET',
-     url: 'https://genius-song-lyrics1.p.rapidapi.com/search/',
-     params: {
-       q: search,
-       per_page: '10',
-       page: '1'
-     },
-     headers: {
-       'X-RapidAPI-Key': '4556765a4fmsha4ddc57b29c4ca2p14673fjsn83f56d165000',
-       'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
-     }
-   };
+   const options = useMemo(()=>({
+    method: 'GET',
+    url: 'https://genius-song-lyrics1.p.rapidapi.com/search/',
+    params: {
+      q: search,
+      per_page: '10',
+      page: '1',
+    },
+    headers: {
+      'X-RapidAPI-Key':
+        '4556765a4fmsha4ddc57b29c4ca2p14673fjsn83f56d165000',
+      'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com',
+    },
+  }),[search])
+
    const api=async()=>{
     try {
         const result = await axios.request(options);
         console.log(result.data);
         setResult(result.data.hits)
+        setShowResult(true)
+        setSearch('')
     } catch (error) {
         console.error(error);
     }
    }
   
-  const handleClick=()=>{
-    api()
+  const handleClick=(e)=>{
+    e.preventDefault()
+    if(search!==""){
+    
+      api()
+    }
+    
   }
 
   return (
@@ -40,7 +50,7 @@ const Search = () => {
   
     </form>
     <button onClick={handleClick} style={{width:'80px',margin:'10px',border:'none',borderRadius:'10px',height:'30px',backgroundColor:'#333' ,color:'#fff'}}>Ara</button>
-    {result.length>0 &&(
+    {showResult && result.length>0 &&(
         <div className='container-item'>
        
         <ul>
